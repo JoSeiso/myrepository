@@ -15,5 +15,5 @@ class Router():
         self.conexion = ConnectHandler(**dev_info)  # Almacena el objeto de conexión
         print(f"Conexión establecida con {self.host}.")
 if __name__ == "__main__":
-    cisco = Router("cisco_ios","192.168.1.210","admin","admin")
+    cisco = Router("cisco_ios","192.168.1.210","haiti","haiti")
     cisco.conexion()
