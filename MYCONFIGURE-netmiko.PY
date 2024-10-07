@@ -25,7 +25,7 @@ while True:
     if (option =='haiti'):
         cisco = Router("cisco_ios","192.168.1.210","haiti","haiti")
         with open('cisco-confi.txt', 'r') as configuracion:
-            comando = configuracion.read().strip()#strip nos limpia de caracteres no deseados
+            comando = configuracion.read()#strip nos limpia de caracteres no deseados
         #"show ip interface brief" #hacer una variable que recorra un fichero y este fichero tenga los parametros de configuracion
         cisco.establecer_conexion()
         cisco.enviar_comando(comando)
