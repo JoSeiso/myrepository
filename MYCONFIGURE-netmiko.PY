@@ -1,4 +1,5 @@
 from netmiko import ConnectHandler
+import yaml
 class Router():
     def __init__(self,device_type,host,username,password):
         self.device_type=device_type

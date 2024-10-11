@@ -1,0 +1,8 @@
+router:
+  cisco: 'cisco-r6'
+interface:
+  name: "FastEthernet1/0"
+    ip_address: "192.168.2.20"
+    subnet_mask: "255.255.255.0"
+    description: "Conexión a la LAN"
+    shutdown: no shutdown

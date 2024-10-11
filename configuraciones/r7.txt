@@ -1,0 +1,7 @@
+#r1
+conf t
+router ospf 1
+router-id 1.1.1.8
+network 80.60.9.0 255.255.255.252 area 0
+network 80.60.10.0 255.255.255.252 area 0
+do wr
