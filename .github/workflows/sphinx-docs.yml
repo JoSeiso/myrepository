@@ -3,10 +3,10 @@ name: Build Sphinx Documentation
 on:
   push:
     branches:
-      - main  # Cambia "main" al nombre de la rama en la que trabajas
+      - documentacion  # Cambia "main" al nombre de la rama en la que trabajas
   pull_request:
     branches:
-      - main  # También se ejecutará en los pull requests a la rama "main"
+      - documentacion  # También se ejecutará en los pull requests a la rama "main"
 
 jobs:
   build-docs:
