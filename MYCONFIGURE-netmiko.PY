@@ -1,4 +1,5 @@
 from netmiko import ConnectHandler
+import yaml
 class Router():
     def __init__(self,device_type,host,username,password):
         self.device_type=device_type
@@ -24,7 +25,9 @@ if __name__ == "__main__":
 while True:
     if (option =='haiti'):
         cisco = Router("cisco_ios","192.168.1.210","haiti","haiti")
-        comando = "show ip interface brief"#hacer una variable que recorra un fichero y este fichero tenga los parametros de configuracion
+        with open('cisco-confi.txt', 'r') as configuracion:
+            comando = configuracion.read()#strip nos limpia de caracteres no deseados
+        #"show ip interface brief" #hacer una variable que recorra un fichero y este fichero tenga los parametros de configuracion
         cisco.establecer_conexion()
         cisco.enviar_comando(comando)
         break
@@ -37,7 +40,6 @@ while True:
     elif (option == 'honduras'):
         mikrotik2 = Router("mikrotik_routeros","192.168.1.230","admin","admin")
         comando = '/ip/address/print'
-        mikrotik2.establecer_conexion()
         mikrotik2.enviar_comando(comando)
         break
     
