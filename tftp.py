@@ -32,7 +32,7 @@ class Tftp():
 
 if __name__ == "__main__":
     '''
-    Genera una instancia de la clase Tftp y arranca el servidor.
+    Genera una instancia de la clase Tftp y arranca el servidor para escuchar.
     '''
     try:
         mitftp = Tftp('0.0.0.0', 69, 'copia_seguridad')
